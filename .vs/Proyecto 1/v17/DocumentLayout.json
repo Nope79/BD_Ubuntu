@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\proyecto 1\\backend\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|solutionrelative:proyecto 1\\backend\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|c:\\users\\nopes\\onedrive\\escritorio\\escuela\\bd\\unidad 2\\proyecto 1\\proyecto 1\\proyecto 1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|solutionrelative:proyecto 1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\proyecto 1\\frontend\\inventariof\\f_crear_actualizar_inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|solutionrelative:proyecto 1\\frontend\\inventariof\\f_crear_actualizar_inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\proyecto 1\\frontend\\inventariof\\f_crear_actualizar_inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|solutionrelative:proyecto 1\\frontend\\inventariof\\f_crear_actualizar_inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\proyecto 1\\backend\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ECB4EC2-1FD4-4DF7-AE44-17AE4E0EB9DC}|Proyecto 1\\Proyecto 1.csproj|solutionrelative:proyecto 1\\backend\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\Program.cs",
+              "RelativeDocumentMoniker": "Proyecto 1\\Program.cs",
+              "ToolTip": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\Program.cs",
+              "RelativeToolTip": "Proyecto 1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T18:06:18.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\BackEnd\\Conexion.cs",
+              "RelativeDocumentMoniker": "Proyecto 1\\BackEnd\\Conexion.cs",
+              "ToolTip": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\BackEnd\\Conexion.cs",
+              "RelativeToolTip": "Proyecto 1\\BackEnd\\Conexion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T17:54:42.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Areas.cs",
+              "DocumentMoniker": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\BackEnd\\Areas.cs",
+              "RelativeDocumentMoniker": "Proyecto 1\\BackEnd\\Areas.cs",
+              "ToolTip": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\BackEnd\\Areas.cs",
+              "RelativeToolTip": "Proyecto 1\\BackEnd\\Areas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T05:42:39.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "f_crear_actualizar_inventario.cs",
+              "DocumentMoniker": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\FrontEnd\\InventarioF\\f_crear_actualizar_inventario.cs",
+              "RelativeDocumentMoniker": "Proyecto 1\\FrontEnd\\InventarioF\\f_crear_actualizar_inventario.cs",
+              "ToolTip": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\FrontEnd\\InventarioF\\f_crear_actualizar_inventario.cs",
+              "RelativeToolTip": "Proyecto 1\\FrontEnd\\InventarioF\\f_crear_actualizar_inventario.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAIAwwFMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T05:34:53.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "f_crear_actualizar_inventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\FrontEnd\\InventarioF\\f_crear_actualizar_inventario.cs",
+              "RelativeDocumentMoniker": "Proyecto 1\\FrontEnd\\InventarioF\\f_crear_actualizar_inventario.cs",
+              "ToolTip": "C:\\Users\\nopes\\OneDrive\\Escritorio\\Escuela\\BD\\Unidad 2\\Proyecto 1\\Proyecto 1\\Proyecto 1\\FrontEnd\\InventarioF\\f_crear_actualizar_inventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto 1\\FrontEnd\\InventarioF\\f_crear_actualizar_inventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T05:18:51.447Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
