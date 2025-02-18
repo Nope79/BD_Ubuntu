@@ -1,4 +1,5 @@
-﻿using Proyecto_1.BackEnd;
+﻿using MaterialSkin.Controls;
+using Proyecto_1.BackEnd;
 using Proyecto_1.FrontEnd.Area;
 using Proyecto_1.FrontEnd.Inventario;
 using System;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace Proyecto_1.FrontEnd
 {
-    public partial class f_inventario : Form
+    public partial class f_inventario : MaterialForm
     {
         Inventarios i = new Inventarios();
         public f_inventario()
@@ -32,27 +33,6 @@ namespace Proyecto_1.FrontEnd
         {
             Inventarios i = new Inventarios();
             dgv_inventario.DataSource = i.seleccionar();
-        }
-
-        private void btn_eliminar_Click(object sender, EventArgs e)
-        {
-            if (i.eliminar(i)) MessageBox.Show("Elemento borrado exitosamente.");
-            else MessageBox.Show("No se ha podido eliminar el elemento.");
-            f_inventario_Load(null, null);
-        }
-
-        private void btn_actualizar_Click(object sender, EventArgs e)
-        {
-            f_crear_actualizar_inventario ac = new f_crear_actualizar_inventario(i);
-            ac.Show();
-            this.Hide();
-        }
-
-        private void btn_crear_Click(object sender, EventArgs e)
-        {
-            f_crear_actualizar_inventario ac = new f_crear_actualizar_inventario();
-            ac.Show();
-            this.Hide();
         }
 
         private void dgv_inventario_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -90,9 +70,25 @@ namespace Proyecto_1.FrontEnd
             }
         }
 
-        private void dgv_inventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_crear_Click_1(object sender, EventArgs e)
         {
+            f_crear_actualizar_inventario ac = new f_crear_actualizar_inventario();
+            ac.Show();
+            this.Hide();
+        }
 
+        private void btn_actualizar_Click_1(object sender, EventArgs e)
+        {
+            f_crear_actualizar_inventario ac = new f_crear_actualizar_inventario(i);
+            ac.Show();
+            this.Hide();
+        }
+
+        private void btn_eliminar_Click_1(object sender, EventArgs e)
+        {
+            if (i.eliminar(i)) MessageBox.Show("Elemento borrado exitosamente.");
+            else MessageBox.Show("No se ha podido eliminar el elemento.");
+            f_inventario_Load(null, null);
         }
     }
 }

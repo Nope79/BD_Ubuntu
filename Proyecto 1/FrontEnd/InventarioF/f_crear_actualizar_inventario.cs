@@ -2,13 +2,14 @@
 using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 using Proyecto_1.BackEnd;
 using Proyecto_1.FrontEnd.Area;
 using static Mysqlx.Expect.Open.Types.Condition.Types;
 
 namespace Proyecto_1.FrontEnd.Inventario
 {
-    public partial class f_crear_actualizar_inventario : Form
+    public partial class f_crear_actualizar_inventario : MaterialForm
     {
         bool modo = false; // modo crear es false, modo actualizar es true.
         public f_crear_actualizar_inventario()
@@ -27,42 +28,6 @@ namespace Proyecto_1.FrontEnd.Inventario
             lbl_inventario_tipo.Text = i.inventario_tipo.ToString();
             txb_inventario_observaciones.Text = i.inventario_observaciones.ToString();
             txb_area_id.Text = i.area_id.ToString();
-        }
-
-        private void btn_guardar_Click(object sender, EventArgs e)
-        {
-            string aux = dtp_inventario_fecha.Value.ToString();
-            string fecha = aux.Substring(6, 4) + "-" + aux.Substring(3, 2) + "-" + aux.Substring(0, 2);
-
-            string validacion = validar(fecha);
-
-            if (validacion == "Válido")
-            {
-                if (!modo)
-                {
-                    // Intentamos realizar la insersion
-                    Inventarios i = new Inventarios(txb_inventario_nombre.Text, txb_inventario_descripcion.Text, txb_inventario_serie.Text, lbx_inventario_color.Text, fecha, lbx_inventario_tipo.Text, txb_inventario_observaciones.Text, int.Parse(txb_area_id.Text));
-                    if (i.insertar(i)) MessageBox.Show("Insersión Exitosa!");
-                    else MessageBox.Show("Ha ocurrido un error. No se ha realizado la insersión.");
-                }
-                else
-                {
-                    // Intentamos realizar la actualización
-                    Inventarios i = new Inventarios(txb_inventario_nombre.Text, txb_inventario_descripcion.Text, txb_inventario_serie.Text, lbx_inventario_color.Text, fecha, lbx_inventario_tipo.Text, txb_inventario_observaciones.Text, int.Parse(txb_area_id.Text));
-                    if (i.actualizar(i)) MessageBox.Show("Actualización Exitosa!");
-                    else MessageBox.Show("Ha ocurrido un error. No se ha realizado la actualización.");
-                }
-
-                // Volvemos a la pagina de inventario
-
-                f_inventario fi = new f_inventario();
-                fi.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show(validacion);
-            }
         }
 
         private string validar(string fecha)
@@ -115,6 +80,47 @@ namespace Proyecto_1.FrontEnd.Inventario
         }
 
         private void lbx_area_id_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_guardar_Click_1(object sender, EventArgs e)
+        {
+            string aux = dtp_inventario_fecha.Value.ToString();
+            string fecha = aux.Substring(6, 4) + "-" + aux.Substring(3, 2) + "-" + aux.Substring(0, 2);
+
+            string validacion = validar(fecha);
+
+            if (validacion == "Válido")
+            {
+                if (!modo)
+                {
+                    // Intentamos realizar la insersion
+                    Inventarios i = new Inventarios(txb_inventario_nombre.Text, txb_inventario_descripcion.Text, txb_inventario_serie.Text, lbx_inventario_color.Text, fecha, lbx_inventario_tipo.Text, txb_inventario_observaciones.Text, int.Parse(txb_area_id.Text));
+                    if (i.insertar(i)) MessageBox.Show("Insersión Exitosa!");
+                    else MessageBox.Show("Ha ocurrido un error. No se ha realizado la insersión.");
+                }
+                else
+                {
+                    // Intentamos realizar la actualización
+                    Inventarios i = new Inventarios(txb_inventario_nombre.Text, txb_inventario_descripcion.Text, txb_inventario_serie.Text, lbx_inventario_color.Text, fecha, lbx_inventario_tipo.Text, txb_inventario_observaciones.Text, int.Parse(txb_area_id.Text));
+                    if (i.actualizar(i)) MessageBox.Show("Actualización Exitosa!");
+                    else MessageBox.Show("Ha ocurrido un error. No se ha realizado la actualización.");
+                }
+
+                // Volvemos a la pagina de inventario
+
+                f_inventario fi = new f_inventario();
+                fi.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show(validacion);
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

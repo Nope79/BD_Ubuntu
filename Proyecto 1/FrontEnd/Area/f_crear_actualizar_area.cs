@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 using Proyecto_1.BackEnd;
 
 namespace Proyecto_1.FrontEnd.Area
 {
-    public partial class f_crear_actualizar_area : Form
+    public partial class f_crear_actualizar_area : MaterialForm
     {
         bool modo = false; // modo crear es false, modo actualizar es true.
         public f_crear_actualizar_area()
@@ -34,7 +35,21 @@ namespace Proyecto_1.FrontEnd.Area
 
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private string validar()
+        {
+            // Validaciones de llenado de datos
+            if (tbx_area_nombre.Text.Length == 0 && tbx_area_ubicacion.Text.Length == 0) return "Debe llenar todos los campos.";
+            if (tbx_area_nombre.Text.Length == 0) return "Debe llenar el campo 'Nombre'.";
+            if (tbx_area_ubicacion.Text.Length == 0) return "Debe llenar el campo 'Ubicación'.";
+
+            // Validaciones de formato
+            if (!Regex.Match(tbx_area_nombre.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$").Success) return "El nombre solo debe contener letras, espacios, tildes y ñ.";
+            if (!Regex.Match(tbx_area_ubicacion.Text, @"^[0-9a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$").Success) return "La ubicación solo debe contener letras, números, espacios, tildes y ñ.";
+
+            return "Válido";
+        }
+
+        private void btn_guardar_Click_1(object sender, EventArgs e)
         {
             string validacion = validar();
 
@@ -64,20 +79,6 @@ namespace Proyecto_1.FrontEnd.Area
             {
                 MessageBox.Show(validacion);
             }
-        }
-
-        private string validar()
-        {
-            // Validaciones de llenado de datos
-            if (tbx_area_nombre.Text.Length == 0 && tbx_area_ubicacion.Text.Length == 0) return "Debe llenar todos los campos.";
-            if (tbx_area_nombre.Text.Length == 0) return "Debe llenar el campo 'Nombre'.";
-            if (tbx_area_ubicacion.Text.Length == 0) return "Debe llenar el campo 'Ubicación'.";
-
-            // Validaciones de formato
-            if (!Regex.Match(tbx_area_nombre.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$").Success) return "El nombre solo debe contener letras, espacios, tildes y ñ.";
-            if (!Regex.Match(tbx_area_ubicacion.Text, @"^[0-9a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$").Success) return "La ubicación solo debe contener letras, números, espacios, tildes y ñ.";
-
-            return "Válido";
         }
     }
 }

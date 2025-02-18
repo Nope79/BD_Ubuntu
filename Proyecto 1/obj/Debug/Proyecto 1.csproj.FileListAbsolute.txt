@@ -45,3 +45,4 @@ C:\Users\nopes\OneDrive\Escritorio\Escuela\BD\Unidad 2\Proyecto 1\Proyecto 1\Pro
 C:\Users\nopes\OneDrive\Escritorio\Escuela\BD\Unidad 2\Proyecto 1\Proyecto 1\Proyecto 1\obj\Debug\Proyecto 1.csproj.Up2Date
 C:\Users\nopes\OneDrive\Escritorio\Escuela\BD\Unidad 2\Proyecto 1\Proyecto 1\Proyecto 1\obj\Debug\Proyecto 1.exe
 C:\Users\nopes\OneDrive\Escritorio\Escuela\BD\Unidad 2\Proyecto 1\Proyecto 1\Proyecto 1\obj\Debug\Proyecto 1.pdb
+C:\Users\nopes\OneDrive\Escritorio\Escuela\BD\Unidad 2\Proyecto 1\Proyecto 1\Proyecto 1\bin\Debug\MaterialSkin.dll

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 using Proyecto_1.BackEnd;
 
 namespace Proyecto_1.FrontEnd.Area
 {
-    public partial class f_area : Form
+    public partial class f_area : MaterialForm
     {
         Areas a = new Areas();
         
@@ -18,20 +19,6 @@ namespace Proyecto_1.FrontEnd.Area
             f_menu m = new f_menu();
             m.Show(this);
             this.Hide();
-        }
-
-        private void btn_crear_Click(object sender, EventArgs e)
-        {
-            f_crear_actualizar_area c = new f_crear_actualizar_area();
-            c.Show();
-            this.Hide();
-        }
-
-        private void btn_eliminar_Click(object sender, EventArgs e)
-        {
-            if (a.eliminar(a)) MessageBox.Show("Elemento borrado exitosamente.");
-            else MessageBox.Show("No se ha podido eliminar el elemento.");
-            f_area_Load(null, null);
         }
 
         private void f_area_Load(object sender, EventArgs e)
@@ -66,11 +53,25 @@ namespace Proyecto_1.FrontEnd.Area
             }
         }
 
-        private void btn_actualizar_Click(object sender, EventArgs e)
+        private void btn_crear_Click_1(object sender, EventArgs e)
+        {
+            f_crear_actualizar_area c = new f_crear_actualizar_area();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btn_actualizar_Click_1(object sender, EventArgs e)
         {
             f_crear_actualizar_area ac = new f_crear_actualizar_area(a);
             ac.Show();
             this.Hide();
+        }
+
+        private void btn_eliminar_Click_1(object sender, EventArgs e)
+        {
+            if (a.eliminar(a)) MessageBox.Show("Elemento borrado exitosamente.");
+            else MessageBox.Show("No se ha podido eliminar el elemento.");
+            f_area_Load(null, null);
         }
     }
 }
