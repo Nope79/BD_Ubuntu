@@ -10,9 +10,13 @@ namespace Proyecto_1.BackEnd
         private readonly string connectionString;
         public Conexion()
         {
+            // String de conexion, uno es para pruebas locales y el otro para el servidor alojado en la maquina virtual de ubuntu
             connectionString = "server=40.90.195.148; user id = nope; password =Centagrui123;database=proyecto1; port=3306;";
+            //connectionString = "server=localhost; user id = root; password =Centagrui123;database=proyecto1; port=3306;";
             connection = new MySqlConnection(connectionString);
         }
+
+        // Metodo para abrir la conexion
         public void OpenConnection()
         {
             try
@@ -24,9 +28,11 @@ namespace Proyecto_1.BackEnd
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
+
+        // Metodo para cerrar la conexion
         public void CloseConnection()
         {
             try
@@ -39,9 +45,11 @@ namespace Proyecto_1.BackEnd
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
+
+        // Getter de la conexion
         public MySqlConnection GetConnection()
         {
             return connection;

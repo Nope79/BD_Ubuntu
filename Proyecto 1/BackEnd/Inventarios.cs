@@ -10,6 +10,7 @@ namespace Proyecto_1.BackEnd
 {
     public class Inventarios
     {
+        // atributos de la tabla inventario en la base de datos
         public int inventario_id;
         public string inventario_nombre;
         public string inventario_descripcion;
@@ -21,6 +22,7 @@ namespace Proyecto_1.BackEnd
         public int area_id;
         Conexion c;
 
+        // Multiples constructores para facilitar el manejor de objetos y la creacion de frames
         public Inventarios()
         {
             c = new Conexion();
@@ -59,6 +61,7 @@ namespace Proyecto_1.BackEnd
             c = new Conexion();
         }
 
+        // Metodos de seleccionar, añadir, eliminar y actualizar, todo usando transacciones
         public DataTable seleccionar()
         {
             DataTable dataTable = new DataTable();
@@ -78,7 +81,7 @@ namespace Proyecto_1.BackEnd
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                //Console.WriteLine(ex);
             }
             finally
             {
@@ -119,7 +122,7 @@ namespace Proyecto_1.BackEnd
                 {
                     tran.Rollback();
                 }
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 return false;
             }
             finally
@@ -152,7 +155,7 @@ namespace Proyecto_1.BackEnd
                 {
                     tran.Rollback();
                 }
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
 
                 res = false;
             }
@@ -197,7 +200,7 @@ namespace Proyecto_1.BackEnd
                 {
                     tran.Rollback();
                 }
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 res = false;
             }
             finally

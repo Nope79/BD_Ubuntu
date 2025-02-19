@@ -32,17 +32,17 @@
             this.lbl_area_nombre = new System.Windows.Forms.Label();
             this.lbl_area_ubicacion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tbx_area_ubicacion = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.tbx_area_nombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txb_area_ubicacion = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txb_area_nombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btn_guardar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_regresar
             // 
-            this.btn_regresar.Location = new System.Drawing.Point(12, 276);
+            this.btn_regresar.Location = new System.Drawing.Point(12, 287);
             this.btn_regresar.Name = "btn_regresar";
-            this.btn_regresar.Size = new System.Drawing.Size(93, 23);
+            this.btn_regresar.Size = new System.Drawing.Size(115, 23);
             this.btn_regresar.TabIndex = 5;
             this.btn_regresar.Text = "REGRESAR";
             this.btn_regresar.UseVisualStyleBackColor = true;
@@ -51,68 +51,72 @@
             // lbl_area_nombre
             // 
             this.lbl_area_nombre.AutoSize = true;
+            this.lbl_area_nombre.Font = new System.Drawing.Font("Mongolian Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_area_nombre.Location = new System.Drawing.Point(19, 31);
             this.lbl_area_nombre.Name = "lbl_area_nombre";
-            this.lbl_area_nombre.Size = new System.Drawing.Size(66, 16);
+            this.lbl_area_nombre.Size = new System.Drawing.Size(63, 14);
             this.lbl_area_nombre.TabIndex = 7;
             this.lbl_area_nombre.Text = "NOMBRE";
             // 
             // lbl_area_ubicacion
             // 
             this.lbl_area_ubicacion.AutoSize = true;
+            this.lbl_area_ubicacion.Font = new System.Drawing.Font("Mongolian Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_area_ubicacion.Location = new System.Drawing.Point(6, 110);
             this.lbl_area_ubicacion.Name = "lbl_area_ubicacion";
-            this.lbl_area_ubicacion.Size = new System.Drawing.Size(79, 16);
+            this.lbl_area_ubicacion.Size = new System.Drawing.Size(78, 14);
             this.lbl_area_ubicacion.TabIndex = 8;
             this.lbl_area_ubicacion.Text = "UBICACIÓN";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.tbx_area_ubicacion);
-            this.panel1.Controls.Add(this.tbx_area_nombre);
+            this.panel1.Controls.Add(this.txb_area_ubicacion);
+            this.panel1.Controls.Add(this.txb_area_nombre);
             this.panel1.Controls.Add(this.lbl_area_ubicacion);
             this.panel1.Controls.Add(this.lbl_area_nombre);
-            this.panel1.Location = new System.Drawing.Point(28, 74);
+            this.panel1.Location = new System.Drawing.Point(28, 85);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 149);
             this.panel1.TabIndex = 9;
             // 
-            // tbx_area_ubicacion
+            // txb_area_ubicacion
             // 
-            this.tbx_area_ubicacion.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbx_area_ubicacion.Depth = 0;
-            this.tbx_area_ubicacion.Hint = "";
-            this.tbx_area_ubicacion.Location = new System.Drawing.Point(91, 102);
-            this.tbx_area_ubicacion.MaxLength = 32767;
-            this.tbx_area_ubicacion.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tbx_area_ubicacion.Name = "tbx_area_ubicacion";
-            this.tbx_area_ubicacion.PasswordChar = '\0';
-            this.tbx_area_ubicacion.SelectedText = "";
-            this.tbx_area_ubicacion.SelectionLength = 0;
-            this.tbx_area_ubicacion.SelectionStart = 0;
-            this.tbx_area_ubicacion.Size = new System.Drawing.Size(176, 28);
-            this.tbx_area_ubicacion.TabIndex = 11;
-            this.tbx_area_ubicacion.TabStop = false;
-            this.tbx_area_ubicacion.UseSystemPasswordChar = false;
+            this.txb_area_ubicacion.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txb_area_ubicacion.Depth = 0;
+            this.txb_area_ubicacion.Hint = "";
+            this.txb_area_ubicacion.Location = new System.Drawing.Point(91, 102);
+            this.txb_area_ubicacion.MaxLength = 45;
+            this.txb_area_ubicacion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txb_area_ubicacion.Name = "txb_area_ubicacion";
+            this.txb_area_ubicacion.PasswordChar = '\0';
+            this.txb_area_ubicacion.SelectedText = "";
+            this.txb_area_ubicacion.SelectionLength = 0;
+            this.txb_area_ubicacion.SelectionStart = 0;
+            this.txb_area_ubicacion.Size = new System.Drawing.Size(176, 28);
+            this.txb_area_ubicacion.TabIndex = 11;
+            this.txb_area_ubicacion.TabStop = false;
+            this.txb_area_ubicacion.UseSystemPasswordChar = false;
+            this.txb_area_ubicacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txb_area_ubicacion_KeyUp);
             // 
-            // tbx_area_nombre
+            // txb_area_nombre
             // 
-            this.tbx_area_nombre.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbx_area_nombre.Depth = 0;
-            this.tbx_area_nombre.Hint = "";
-            this.tbx_area_nombre.Location = new System.Drawing.Point(91, 19);
-            this.tbx_area_nombre.MaxLength = 32767;
-            this.tbx_area_nombre.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tbx_area_nombre.Name = "tbx_area_nombre";
-            this.tbx_area_nombre.PasswordChar = '\0';
-            this.tbx_area_nombre.SelectedText = "";
-            this.tbx_area_nombre.SelectionLength = 0;
-            this.tbx_area_nombre.SelectionStart = 0;
-            this.tbx_area_nombre.Size = new System.Drawing.Size(176, 28);
-            this.tbx_area_nombre.TabIndex = 10;
-            this.tbx_area_nombre.TabStop = false;
-            this.tbx_area_nombre.UseSystemPasswordChar = false;
+            this.txb_area_nombre.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txb_area_nombre.Depth = 0;
+            this.txb_area_nombre.Hint = "";
+            this.txb_area_nombre.Location = new System.Drawing.Point(91, 19);
+            this.txb_area_nombre.MaxLength = 45;
+            this.txb_area_nombre.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txb_area_nombre.Name = "txb_area_nombre";
+            this.txb_area_nombre.PasswordChar = '\0';
+            this.txb_area_nombre.SelectedText = "";
+            this.txb_area_nombre.SelectionLength = 0;
+            this.txb_area_nombre.SelectionStart = 0;
+            this.txb_area_nombre.Size = new System.Drawing.Size(176, 28);
+            this.txb_area_nombre.TabIndex = 10;
+            this.txb_area_nombre.TabStop = false;
+            this.txb_area_nombre.UseSystemPasswordChar = false;
+            this.txb_area_nombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txb_area_nombre_KeyUp);
             // 
             // btn_guardar
             // 
@@ -120,7 +124,7 @@
             this.btn_guardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_guardar.Depth = 0;
             this.btn_guardar.Icon = null;
-            this.btn_guardar.Location = new System.Drawing.Point(198, 256);
+            this.btn_guardar.Location = new System.Drawing.Point(198, 267);
             this.btn_guardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Primary = true;
@@ -134,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 311);
+            this.ClientSize = new System.Drawing.Size(328, 330);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.panel1);
@@ -155,8 +159,8 @@
         private System.Windows.Forms.Label lbl_area_nombre;
         private System.Windows.Forms.Label lbl_area_ubicacion;
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField tbx_area_ubicacion;
-        private MaterialSkin.Controls.MaterialSingleLineTextField tbx_area_nombre;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txb_area_ubicacion;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txb_area_nombre;
         private MaterialSkin.Controls.MaterialRaisedButton btn_guardar;
     }
 }

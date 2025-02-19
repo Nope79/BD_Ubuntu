@@ -7,11 +7,13 @@ namespace Proyecto_1.BackEnd
 {
     public class Areas
     {
+        // atributos de la tabla area en la base de datos
         public int area_id;
         public string area_nombre;
         public string area_ubicacion;
         Conexion c = new Conexion();
 
+        // Se tienen distintos constructores para facilitarnos el trabajo a la hora de cargar distintas vistas, ese es su principal funcion
         public Areas()
         {
         }
@@ -34,6 +36,7 @@ namespace Proyecto_1.BackEnd
             this.area_ubicacion = area_ubicacion;
         }
 
+        // Metodos de seleccionar, añadir, eliminar y actualizar, todo usando transacciones
         public DataTable seleccionar()
         {
             DataTable dataTable = new DataTable();
@@ -53,7 +56,7 @@ namespace Proyecto_1.BackEnd
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                //Console.WriteLine(ex);
             }
             finally
             {
@@ -91,7 +94,7 @@ namespace Proyecto_1.BackEnd
                 {
                     tran.Rollback();
                 }
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 return false;
             }
             finally
@@ -124,7 +127,7 @@ namespace Proyecto_1.BackEnd
                 {
                     tran.Rollback();
                 }
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 res = false;
             }
             finally
@@ -161,7 +164,7 @@ namespace Proyecto_1.BackEnd
                 {
                     tran.Rollback();
                 }
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 res = false;
             }
             finally
@@ -172,6 +175,7 @@ namespace Proyecto_1.BackEnd
             return res;
         }
 
+        // Buscamos un id para verificar que una area existe y poder hacer una insersión o actualización en inventario
         public bool buscar_id(int id)
         {
             bool u = false;
@@ -194,7 +198,7 @@ namespace Proyecto_1.BackEnd
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
             finally
             {

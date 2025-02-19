@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 using Proyecto_1.BackEnd;
-using Proyecto_1.FrontEnd.Area;
-using static Mysqlx.Expect.Open.Types.Condition.Types;
 
 namespace Proyecto_1.FrontEnd.Inventario
 {
     public partial class f_crear_actualizar_inventario : MaterialForm
     {
         bool modo = false; // modo crear es false, modo actualizar es true.
+
+        // Constructores para cargar el form, reutilizandolo de forma inteligente
         public f_crear_actualizar_inventario()
         {
             InitializeComponent();
@@ -30,7 +29,8 @@ namespace Proyecto_1.FrontEnd.Inventario
             txb_area_id.Text = i.area_id.ToString();
         }
 
-        private string validar(string fecha)
+        // Metodo para realizar las validaciones
+        private string validar()
         {
             try
             {
@@ -72,6 +72,7 @@ namespace Proyecto_1.FrontEnd.Inventario
 
         }
 
+        // Se carga el form de inventario
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             f_inventario f = new f_inventario();
@@ -86,29 +87,31 @@ namespace Proyecto_1.FrontEnd.Inventario
 
         private void btn_guardar_Click_1(object sender, EventArgs e)
         {
+            // Se convierte la fecha para guardarla mas tarde
             string aux = dtp_inventario_fecha.Value.ToString();
             string fecha = aux.Substring(6, 4) + "-" + aux.Substring(3, 2) + "-" + aux.Substring(0, 2);
 
-            string validacion = validar(fecha);
+            // Se realiza la validacion
+            string validacion = validar();
 
             if (validacion == "Válido")
             {
+                Inventarios i = new Inventarios(txb_inventario_nombre.Text, txb_inventario_descripcion.Text, txb_inventario_serie.Text, lbx_inventario_color.Text, fecha, lbx_inventario_tipo.Text, txb_inventario_observaciones.Text, int.Parse(txb_area_id.Text));
+
                 if (!modo)
                 {
                     // Intentamos realizar la insersion
-                    Inventarios i = new Inventarios(txb_inventario_nombre.Text, txb_inventario_descripcion.Text, txb_inventario_serie.Text, lbx_inventario_color.Text, fecha, lbx_inventario_tipo.Text, txb_inventario_observaciones.Text, int.Parse(txb_area_id.Text));
                     if (i.insertar(i)) MessageBox.Show("Insersión Exitosa!");
                     else MessageBox.Show("Ha ocurrido un error. No se ha realizado la insersión.");
                 }
                 else
                 {
                     // Intentamos realizar la actualización
-                    Inventarios i = new Inventarios(txb_inventario_nombre.Text, txb_inventario_descripcion.Text, txb_inventario_serie.Text, lbx_inventario_color.Text, fecha, lbx_inventario_tipo.Text, txb_inventario_observaciones.Text, int.Parse(txb_area_id.Text));
                     if (i.actualizar(i)) MessageBox.Show("Actualización Exitosa!");
                     else MessageBox.Show("Ha ocurrido un error. No se ha realizado la actualización.");
                 }
 
-                // Volvemos a la pagina de inventario
+                // Volvemos a la pagina de inventario independientemente de si se hizo o no la insercion/actualizacion
 
                 f_inventario fi = new f_inventario();
                 fi.Show();
@@ -117,8 +120,75 @@ namespace Proyecto_1.FrontEnd.Inventario
             else
             {
                 MessageBox.Show(validacion);
+                txb_inventario_nombre.Focus();
             }
         }
+
+        // Eventos para que al dar click, se avance de forma mas comoda entre los componentes a llenar
+        /////////////////////////////////////////////////////////////////////////////////////////////////
+        private void txb_inventario_nombre_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txb_area_id.Focus();
+            }
+        }
+
+        private void txb_area_id_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dtp_inventario_fecha.Focus();
+            }
+        }
+        private void dtp_inventario_fecha_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txb_inventario_serie.Focus();
+            }
+        }
+
+        private void txb_inventario_serie_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txb_inventario_descripcion.Focus();
+            }
+        }
+
+        private void txb_inventario_descripcion_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txb_inventario_observaciones.Focus();
+            }
+        }
+
+        private void txb_inventario_observaciones_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                lbx_inventario_tipo.Focus();
+            }
+        }
+
+        private void lbx_inventario_tipo_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                lbx_inventario_color.Focus();
+            }
+        }
+
+        private void lbx_inventario_color_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_guardar.Focus();
+            }
+        }
+        /////////////////////////////////////////////////////////////////////////////////////////////////
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

@@ -29,12 +29,14 @@ namespace Proyecto_1.FrontEnd
             this.Hide();
         }
 
+        // Se carga la informacion de la base de datos al data grid view 
         private void f_inventario_Load(object sender, EventArgs e)
         {
             Inventarios i = new Inventarios();
             dgv_inventario.DataSource = i.seleccionar();
         }
 
+        // Evento para cuando se clickee una celda valida en el data grid view, si no hay problemas, se activan los botones de actualizar y borrar, si no, no
         private void dgv_inventario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -70,6 +72,7 @@ namespace Proyecto_1.FrontEnd
             }
         }
 
+        // Se carga el frame de crear_actualizar con el constructor que no recibe nada, ya que crearemos un inventario desde cero
         private void btn_crear_Click_1(object sender, EventArgs e)
         {
             f_crear_actualizar_inventario ac = new f_crear_actualizar_inventario();
@@ -77,6 +80,7 @@ namespace Proyecto_1.FrontEnd
             this.Hide();
         }
 
+        // Se carga el frame de crear_actualizar con un el constructor que recibeun objeto, ya que nos servira para cargar en los componentes la informacion, ya que actalizaremos
         private void btn_actualizar_Click_1(object sender, EventArgs e)
         {
             f_crear_actualizar_inventario ac = new f_crear_actualizar_inventario(i);
@@ -84,6 +88,7 @@ namespace Proyecto_1.FrontEnd
             this.Hide();
         }
 
+        // Se intenta eliminar el elemento seleccionado en el data grid view, se recarga el frame
         private void btn_eliminar_Click_1(object sender, EventArgs e)
         {
             if (i.eliminar(i)) MessageBox.Show("Elemento borrado exitosamente.");

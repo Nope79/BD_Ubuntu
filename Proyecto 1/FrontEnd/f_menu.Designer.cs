@@ -34,6 +34,7 @@
             this.p_1 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.p_1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_area
@@ -42,13 +43,13 @@
             this.btn_area.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_area.Depth = 0;
             this.btn_area.Icon = null;
-            this.btn_area.Location = new System.Drawing.Point(480, 154);
+            this.btn_area.Location = new System.Drawing.Point(329, 8);
             this.btn_area.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_area.Name = "btn_area";
             this.btn_area.Primary = true;
-            this.btn_area.Size = new System.Drawing.Size(65, 36);
+            this.btn_area.Size = new System.Drawing.Size(107, 36);
             this.btn_area.TabIndex = 4;
-            this.btn_area.Text = "ÁREA";
+            this.btn_area.Text = "    ÁREA     \' ";
             this.btn_area.UseVisualStyleBackColor = true;
             this.btn_area.Click += new System.EventHandler(this.btn_area_Click_1);
             // 
@@ -57,8 +58,9 @@
             this.btn_inventario.AutoSize = true;
             this.btn_inventario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_inventario.Depth = 0;
+            this.btn_inventario.Font = new System.Drawing.Font("Modern No. 20", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_inventario.Icon = null;
-            this.btn_inventario.Location = new System.Drawing.Point(211, 154);
+            this.btn_inventario.Location = new System.Drawing.Point(12, 8);
             this.btn_inventario.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Primary = true;
@@ -70,13 +72,14 @@
             // 
             // lbl_presentacion
             // 
-            this.lbl_presentacion.AutoSize = true;
             this.lbl_presentacion.BackColor = System.Drawing.Color.AliceBlue;
-            this.lbl_presentacion.Location = new System.Drawing.Point(229, 22);
+            this.lbl_presentacion.Font = new System.Drawing.Font("Modern No. 20", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_presentacion.Location = new System.Drawing.Point(202, 18);
             this.lbl_presentacion.Name = "lbl_presentacion";
-            this.lbl_presentacion.Size = new System.Drawing.Size(55, 16);
+            this.lbl_presentacion.Size = new System.Drawing.Size(107, 40);
             this.lbl_presentacion.TabIndex = 6;
             this.lbl_presentacion.Text = "¡Que tal!";
+            this.lbl_presentacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_presentacion.Click += new System.EventHandler(this.lbl_presentacion_Click_1);
             // 
             // p_1
@@ -84,17 +87,19 @@
             this.p_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.p_1.Controls.Add(this.panel1);
             this.p_1.Controls.Add(this.lbl_presentacion);
-            this.p_1.Location = new System.Drawing.Point(166, 72);
+            this.p_1.Location = new System.Drawing.Point(166, 81);
             this.p_1.Name = "p_1";
-            this.p_1.Size = new System.Drawing.Size(510, 177);
+            this.p_1.Size = new System.Drawing.Size(510, 149);
             this.p_1.TabIndex = 7;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btn_area);
+            this.panel1.Controls.Add(this.btn_inventario);
             this.panel1.Location = new System.Drawing.Point(34, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(443, 78);
+            this.panel1.Size = new System.Drawing.Size(443, 58);
             this.panel1.TabIndex = 7;
             // 
             // f_menu
@@ -103,17 +108,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 275);
-            this.Controls.Add(this.btn_inventario);
-            this.Controls.Add(this.btn_area);
             this.Controls.Add(this.p_1);
             this.Name = "f_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.p_1.ResumeLayout(false);
-            this.p_1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
