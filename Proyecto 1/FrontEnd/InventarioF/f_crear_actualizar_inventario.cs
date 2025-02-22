@@ -9,6 +9,7 @@ namespace Proyecto_1.FrontEnd.Inventario
     public partial class f_crear_actualizar_inventario : MaterialForm
     {
         bool modo = false; // modo crear es false, modo actualizar es true.
+        int llave = 0; // clave del inventario
 
         // Constructores para cargar el form, reutilizandolo de forma inteligente
         public f_crear_actualizar_inventario()
@@ -27,6 +28,8 @@ namespace Proyecto_1.FrontEnd.Inventario
             lbl_inventario_tipo.Text = i.inventario_tipo.ToString();
             txb_inventario_observaciones.Text = i.inventario_observaciones.ToString();
             txb_area_id.Text = i.area_id.ToString();
+            modo = true;
+            llave = i.inventario_id;
         }
 
         // Metodo para realizar las validaciones
@@ -96,7 +99,7 @@ namespace Proyecto_1.FrontEnd.Inventario
 
             if (validacion == "Válido")
             {
-                Inventarios i = new Inventarios(txb_inventario_nombre.Text, txb_inventario_descripcion.Text, txb_inventario_serie.Text, lbx_inventario_color.Text, fecha, lbx_inventario_tipo.Text, txb_inventario_observaciones.Text, int.Parse(txb_area_id.Text));
+                Inventarios i = new Inventarios(llave, txb_inventario_nombre.Text, txb_inventario_descripcion.Text, txb_inventario_serie.Text, lbx_inventario_color.Text, fecha, lbx_inventario_tipo.Text, txb_inventario_observaciones.Text, int.Parse(txb_area_id.Text));
 
                 if (!modo)
                 {

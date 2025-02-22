@@ -9,6 +9,7 @@ namespace Proyecto_1.FrontEnd.Area
     public partial class f_crear_actualizar_area : MaterialForm
     {
         bool modo = false; // modo crear es false, modo actualizar es true.
+        int llave = 0; // clave del area
 
         // Distintos constructores dependiendo de la accion que se quiera realizar, crear o actualizar
         public f_crear_actualizar_area()
@@ -22,6 +23,7 @@ namespace Proyecto_1.FrontEnd.Area
             txb_area_nombre.Text = a.area_nombre.ToString();
             txb_area_ubicacion.Text = a.area_ubicacion.ToString();
             modo = true;
+            llave = a.area_id;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -59,7 +61,7 @@ namespace Proyecto_1.FrontEnd.Area
 
             if (validacion == "Válido")
             {
-                Areas a = new Areas(txb_area_nombre.Text, txb_area_ubicacion.Text);
+                Areas a = new Areas(llave, txb_area_nombre.Text, txb_area_ubicacion.Text);
                 if (!modo)
                 {
                     // Intentamos realizar la insersion
